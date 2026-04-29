@@ -50,7 +50,7 @@ public class AuthService {
 
         if(user != null) throw new IllegalArgumentException("User Already Exits");
 
-        user = userRepository.save(User.builder()
+        user = userRepository.save(User.builder() 
                 .username(loginRequestDTO.getUsername())
                 .password(passwordEncoder.encode(loginRequestDTO.getPassword()))
                 .build()
