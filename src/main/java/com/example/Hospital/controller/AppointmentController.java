@@ -32,7 +32,7 @@ public class AppointmentController {
         return ResponseEntity.ok(appointmentService.getAllAppointments());
     }
 
-    // ✅ Get Appointment by ID
+    // ✅ Get Appointment by ID's
     @GetMapping("/{id}")
     public ResponseEntity<Appointment> getAppointmentById(@PathVariable Long id) {
         return appointmentService.getAppointmentById(id)
